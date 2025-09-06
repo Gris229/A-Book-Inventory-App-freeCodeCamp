@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+table {
+  margin: 30px auto;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: 2px solid gray;
+
+}
+
+th {
+  border-bottom: 1px solid black;
+
+}
+
+tr[class="read"] {
+  background: linear-gradient(white, gray);
+}
+
+tr[class="to-read"] {
+  background: linear-gradient(white, gray);
+} 
+
+tr[class="in-progress"] {
+  background: linear-gradient(white, gray);
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid red;
+  background: linear-gradient(#666, #900);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid green;
+  background: linear-gradient(#666, #060);
+
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid blue;
+  background: linear-gradient(#666, #006)
+}
+
+span[class="status"], span[class^="rate"] {
+  height: 50px;
+  width: 90%;
+  padding: 5px;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid black;
+  border-radius: 100%;
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #555;
+}
+
+span[class~="one"] > span:first-child {
+  background: linear-gradient(gold, #b8860b);
+}
+
+span[class~="two"] > span:nth-child(-n+2) {
+  background: linear-gradient(gold, #b8860b)
+}
+
+span[class~="three"]  span {
+  background: linear-gradient(gold, #b8860b);
+}
